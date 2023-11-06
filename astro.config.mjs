@@ -6,6 +6,8 @@ import FeaturedImageDownloader from "./src/integrations/featured-image-downloade
 import PublicNotionCopier from "./src/integrations/public-notion-copier";
 import tailwind from "@astrojs/tailwind";
 import react from "@astrojs/react";
+import yaml from '@rollup/plugin-yaml';
+
 const getSite = function () {
   if (CUSTOM_DOMAIN) {
     return new URL(BASE_PATH, `https://${CUSTOM_DOMAIN}`).toString();
@@ -37,7 +39,12 @@ export default defineConfig({
     CustomIconDownloader(),
     FeaturedImageDownloader(),
     PublicNotionCopier(),
-    tailwind(),
+    tailwind({
+      applyBaseStyles: false,
+    }),
     react(),
   ],
+  vite: {
+    plugins: [yaml()]
+  }
 });
