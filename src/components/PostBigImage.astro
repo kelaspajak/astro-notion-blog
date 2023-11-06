@@ -17,17 +17,13 @@ if (post.FeaturedImage && post.FeaturedImage.Url) {
   }
 }
 
-let title = post.Title
+let title = post.Title;
 ---
 
 {
   image && (
     <div class="aspect-w-16 aspect-h-7 max-w-7xl mx-auto">
-      <img
-        class="w-full object-cover md:rounded-xl"
-        src={image}
-        alt={title}
-      />
+      <img class="w-full object-cover md:rounded-xl" src={image} alt={title} />
     </div>
   )
 }

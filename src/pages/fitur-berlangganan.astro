@@ -1,32 +1,30 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import { Image } from 'astro:assets';
-import hero from '../images/hero-berlangganan.jpg?url';
-import FiturLangganan from '../components/FiturLangganan.astro';
-import Pricing from '../components/Pricing.astro';
-
+import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import hero from "../images/hero-berlangganan.jpg?url";
+import FiturLangganan from "../components/FiturLangganan.astro";
+import Pricing from "../components/Pricing.astro";
 ---
 
 <Layout>
-	<div slot="main">
-		<div class="mx-4">
-			<div class="aspect-w-16 aspect-h-7 max-w-5xl mx-auto">
-				<Image
-					width={1024}
-					height={350}
-					quality="high"
-					class="w-full object-cover rounded-xl hover:scale-105 transition duration-300 cursor-pointer"
-					src={hero}
-					alt="Gambar Feature aplikasi yang digunakan dalam diskusi perpajakan sharepoint teams telegram"
-				/>
-			</div>
-			<div class="w-full max-w-5xl mx-auto my-10">
-				<FiturLangganan />
-			</div>
-			<div class="w-full max-w-2xl mx-auto my-10">
-				<Pricing />
-			</div>
-			
-		</div>
-	</div>
+  <div slot="main">
+    <div class="mx-4">
+      <div class="aspect-w-16 aspect-h-7 max-w-5xl mx-auto">
+        <Image
+          width={1024}
+          height={350}
+          quality="high"
+          class="w-full object-cover rounded-xl hover:scale-105 transition duration-300 cursor-pointer"
+          src={hero}
+          alt="Gambar Feature aplikasi yang digunakan dalam diskusi perpajakan sharepoint teams telegram"
+        />
+      </div>
+      <div class="w-full max-w-5xl mx-auto my-10">
+        <FiturLangganan />
+      </div>
+      <div class="w-full max-w-2xl mx-auto my-10">
+        <Pricing />
+      </div>
+    </div>
+  </div>
 </Layout>
