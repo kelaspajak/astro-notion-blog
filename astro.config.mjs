@@ -39,9 +39,14 @@ export default defineConfig({
     CustomIconDownloader(),
     FeaturedImageDownloader(),
     PublicNotionCopier(),
-    tailwind({
-      applyBaseStyles: false,
-    }),
+    tailwind(
+      // Example: Disable injecting a basic `base.css` import on every page.
+      // Useful if you need to define and/or import your own custom `base.css`.
+      // maka harus di comment
+    //   {
+    //   applyBaseStyles: false,
+    // }
+    ),
     react(),
   ],
   vite: {
