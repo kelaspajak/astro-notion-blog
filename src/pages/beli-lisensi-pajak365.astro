@@ -2,29 +2,155 @@
 import Layout from "../layouts/Layout.astro";
 import { Image } from "astro:assets";
 import hero from "../images/hero-berlangganan.jpg?url";
-import FiturLangganan from "../components/FiturLangganan.astro";
-import Pricing from "../components/Pricing.astro";
+import { buttonVariants } from "@/components/ui/button";
+import { Icons } from "@/components/icons";
 ---
 
-<Layout>
-  <div slot="main">
-    <div class="mx-4">
-      <div class="aspect-w-16 aspect-h-7 max-w-5xl mx-auto">
-        <Image
-          width={1024}
-          height={350}
-          quality="high"
-          class="w-full object-cover rounded-xl hover:scale-105 transition duration-300 cursor-pointer"
-          src={hero}
-          alt="Gambar Feature aplikasi yang digunakan dalam diskusi perpajakan sharepoint teams telegram"
-        />
-      </div>
-      <div class="w-full max-w-5xl mx-auto my-10">
-        <FiturLangganan />
-      </div>
-      <div class="w-full max-w-2xl mx-auto my-10">
-        <Pricing />
-      </div>
-    </div>
-  </div>
+<Layout
+	title='Beli Lisensi Pajak365'
+	description='Pertama dan Terbesar di Indonesia '
+	ogImage='/og-image.webp'
+	path='/beli-lisensi-pajak365'
+>
+	<div slot='main'>
+		<div class='mx-4'>
+			<div class='aspect-w-16 aspect-h-7 mx-auto max-w-5xl'>
+				<Image
+					width={1024}
+					height={350}
+					quality='high'
+					class='w-full cursor-pointer rounded-xl object-cover transition duration-300 hover:scale-105'
+					src={hero}
+					alt='Gambar Feature aplikasi yang digunakan dalam diskusi perpajakan sharepoint teams telegram'
+				/>
+			</div>
+			<div class='mx-auto my-10 w-full max-w-5xl'>
+				<div class='mx-auto max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14'>
+					<!-- Grid -->
+					<div
+						class='md:grid md:grid-cols-2 md:items-center md:gap-12 xl:gap-32'
+					>
+						<div>
+							<img
+								class='rounded-xl'
+								src='https://illustrations.popsy.co/amber/engineer.svg'
+								alt='Image Description'
+							/>
+						</div>
+						<!-- End Col -->
+
+						<div class='mt-5 sm:mt-10 lg:mt-0'>
+							<div class='space-y-6 sm:space-y-8'>
+								<!-- Title -->
+								<div class='space-y-2 md:space-y-4'>
+									<h2 class='text-3xl font-bold lg:text-4xl'>
+										Beberapa tools yang kami gunakan
+									</h2>
+								</div>
+								<!-- End Title -->
+
+								<!-- List -->
+								<ul role='list' class='space-y-2 sm:space-y-4'>
+									{
+										[
+											{
+												id: 1,
+												name: "Microsoft Teams",
+												desc: "Tempat diskusi lebih komprehensif.",
+											},
+											{
+												id: 2,
+												name: "Microsoft Sharepoint",
+												desc: "Situs web yang digunakan sebagai tempat untuk menyimpan, menata, berbagi, dan mengakses informasi perpajakan.",
+											},
+											{
+												id: 3,
+												name: "Email Business",
+												desc: "setiap user akan mendapatkan akun dengan domain [user]@pajak365.id yang dapat digunakan sebagai alamat email business.",
+											},
+										].map(tool => (
+											<li class='flex space-x-3'>
+												<Icons.circleCheck className='flex-shrink-0 h-6 w-6' />
+												<span class='text-sm sm:text-base text-balance'>
+													<span class='font-bold'>{tool.name}</span>,&nbsp;
+													{tool.desc}
+												</span>
+											</li>
+										))
+									}
+								</ul>
+								<!-- End List -->
+							</div>
+						</div>
+						<!-- End Col -->
+					</div>
+					<!-- End Grid -->
+				</div>
+			</div>
+
+			<!-- pricing
+       -->
+			<div class='mx-auto my-10 w-full max-w-2xl'>
+				<!-- Features -->
+				<div
+					id='pricing'
+					class='mx-auto  px-4 py-10 sm:px-6 lg:px-8 lg:py-14'
+				>
+					<!-- Title -->
+					<div class='mx-auto mb-8 max-w-2xl text-center lg:mb-14'>
+						<h2 class='text-3xl font-bold lg:text-4xl'>Penawaran Terbatas</h2>
+					</div>
+					<!-- End Title -->
+
+					<div class='relative xl:mx-auto xl:w-full'>
+						<!-- Grid -->
+						<div class='relative grid grid-cols-1 gap-6 lg:grid-cols-1'>
+							<!-- awal a -->
+							<a
+								class='relative before:absolute before:inset-0 before:z-10 before:rounded-xl before:border before:border-gray-6 before:transition before:hover:border-2 before:hover:border-blue-7 before:hover:shadow-lg md:order-1'
+								href='https://invoice.xendit.co/od/quantal-quetzal'
+								data-uno-hassubmittext='no'
+								target='_blank'
+							>
+								<div class='relative h-full w-full overflow-hidden rounded-xl'>
+									<div
+										class='flex flex-col items-center justify-center rounded-xl bg-blue-100 p-6 text-center hover:bg-blue-200/80 md:min-h-[360px]'
+									>
+										<p
+											class='bg-gradient-to-l from-orange-500 via-pink-500 to-red-700 bg-clip-text text-xs font-semibold uppercase text-transparent'
+										>
+											Pembayaran per untuk lisensi s.d. Agustus 2024
+										</p>
+										<span
+											class='font-heading text-6xl font-semibold text-gray-12'
+										>
+											<span class='text-lg font-bold'>Rp.</span>600<span
+												class='text-lg font-bold'>.000</span
+											>
+										</span>
+										<h3 class='balance my-6 text-lg font-semibold md:text-xl'>
+											Dapatkan semua materi perpajakan dan akses ke diskusi
+											pajak bersama praktisi perpajakan.
+										</h3>
+										<p class={buttonVariants({ variant: "default" })}
+											>Pembayaran via Xendit<Icons.chevronRight
+												className='ml-2 h-4 w-4'
+											/></p
+										>
+
+										<p class='mt-6 text-xs text-gray-10'>
+											Metode pembayaran menggunakan virtual account, eWallets,
+											Kartu, atau QRIS
+										</p>
+									</div>
+								</div>
+							</a>
+							<!-- akhir a -->
+						</div>
+					</div>
+					<!-- End Features -->
+				</div>
+			</div>
+		</div>
+	</div>
 </Layout>
