@@ -293,5 +293,25 @@ export const Icons = {
   <path d="M9 12l2 2l4 -4" />
 </svg>
   ),
+  facebook: (props: IconProps) => (
+    <svg
+          fill="currentColor"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
+          viewBox="0 0 24 24" {...props}
+        >
+          <path
+            d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"
+          ></path>
+        </svg>
+  ),
+
+  minusVertical: (props: IconProps) => (
+    <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round"  {...props}>
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M12 5v14" />
+</svg>
+  ),
 };
 // className="flex-shrink-0 h-3.5 w-3.5"

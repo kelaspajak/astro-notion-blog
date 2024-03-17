@@ -2,6 +2,7 @@
 import { Image } from "astro:assets";
 import logo from "../images/logo.png?url";
 import { getNavLink } from "../lib/blog-helpers.ts";
+import { Icons } from "./icons";
 ---
 
 <div class="mb-8">
@@ -24,16 +25,9 @@ import { getNavLink } from "../lib/blog-helpers.ts";
         >Diskusi Pajak</span
       >
     </a>
-    <svg
-      width="3"
-      height="21"
-      xmlns="http://www.w3.org/2000/svg"
-      aria-hidden="true"
-      class="ml-4 hidden sm:block"
-      ><path d="M2.74 20.707H.846v-20H2.74v20Z"></path></svg
-    >
-    <p
-      class="text-sm sm:ml-4 sm:pl-4 sm:py-2 sm:mt-0 mt-4 flex font-semibold font-heading"
+    <Icons.minusVertical />
+    <div
+      class="text-sm sm:mt-0 mt-4 flex font-semibold font-heading"
     >
       <a
         href={getNavLink("/beli-lisensi-pajak365")}
@@ -47,28 +41,16 @@ import { getNavLink } from "../lib/blog-helpers.ts";
         rel="noopener noreferrer"
         aria-label="link ke blog post how-to">How-to</a
       >
-    </p>
+    </div>
     <span
-      class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start"
+      class="flex sm:ml-auto sm:mt-0 mt-4 justify-center  item-center"
     >
       <a
         href="https://www.facebook.com/diskusipajak"
         class=""
         target="_blank"
         aria-label="link ke facebook group"
-      >
-        <svg
-          fill="currentColor"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          class="w-5 h-5"
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"
-          ></path>
-        </svg>
+      ><Icons.facebook className="w-5 h-5" />
       </a>
 
       <a
@@ -76,22 +58,7 @@ import { getNavLink } from "../lib/blog-helpers.ts";
         class="ml-3"
         target="_blank"
         aria-label="link ke folder telegram diskusi pajak"
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="w-5 h-5"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          stroke-width="2"
-          stroke="currentColor"
-          fill="none"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        >
-          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-          <path d="M15 10l-4 4l6 6l4 -16l-18 7l4 2l2 6l3 -4"></path>
-        </svg>
+      ><Icons.telegram className="w-5 h-5" />
       </a>
     </span>
   </div>
