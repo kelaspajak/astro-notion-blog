@@ -1,8 +1,8 @@
 ---
-import { Image } from "astro:assets";
-import logo from "../images/logo.png?url";
-import { getNavLink } from "../lib/blog-helpers.ts";
-import { Icons } from "./icons";
+import { Image } from 'astro:assets'
+import logo from '../images/logo.png?url'
+import { getNavLink } from '../lib/blog-helpers.ts'
+import { Icons } from './icons'
 ---
 
 <div class="mb-8">
@@ -10,7 +10,7 @@ import { Icons } from "./icons";
     class="max-w-5xl w-full px-4 py-4 sm:px-6 mx-auto flex items-center sm:flex-row flex-col"
   >
     <a
-      href={getNavLink("/")}
+      href={getNavLink('/')}
       class="flex font-medium items-center md:justify-start justify-center"
       aria-label="logo legend diskusi pajak"
     >
@@ -25,32 +25,28 @@ import { Icons } from "./icons";
         >Diskusi Pajak</span
       >
     </a>
-    <Icons.minusVertical />
-    <div
-      class="text-sm sm:mt-0 mt-4 flex font-semibold font-heading"
-    >
+    <Icons.minusVertical className="hidden sm:block"/>
+    <div class="text-sm sm:mt-0 mt-4 flex font-semibold font-heading">
       <a
-        href={getNavLink("/beli-lisensi-pajak365")}
+        href={getNavLink('/beli-lisensi-pajak365')}
         class="decoration-2 hover:underline decoration-ruby-10"
         rel="noopener noreferrer"
         aria-label="link ke fitur berlangganan">Beli lisensi pajak365</a
       >
       <a
-        href={getNavLink("/posts/tag/How-to")}
+        href={getNavLink('/posts/tag/How-to')}
         class="ml-6 decoration-2 hover:underline"
         rel="noopener noreferrer"
         aria-label="link ke blog post how-to">How-to</a
       >
     </div>
-    <span
-      class="flex sm:ml-auto sm:mt-0 mt-4 justify-center  item-center"
-    >
+    <span class="flex sm:ml-auto sm:mt-0 mt-4 justify-center item-center">
       <a
         href="https://www.facebook.com/diskusipajak"
         class=""
         target="_blank"
         aria-label="link ke facebook group"
-      ><Icons.facebook className="w-5 h-5" />
+        ><Icons.facebook className="w-5 h-5" />
       </a>
 
       <a
@@ -58,7 +54,7 @@ import { Icons } from "./icons";
         class="ml-3"
         target="_blank"
         aria-label="link ke folder telegram diskusi pajak"
-      ><Icons.telegram className="w-5 h-5" />
+        ><Icons.telegram className="w-5 h-5" />
       </a>
     </span>
   </div>

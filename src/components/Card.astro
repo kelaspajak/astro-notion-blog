@@ -1,21 +1,21 @@
 ---
-import { Post } from "../lib/interfaces.ts";
-import { getPostLink, filePath } from "../lib/blog-helpers.ts";
-import PostTags from "../components/PostTags.astro";
+import { Post } from '../lib/interfaces.ts'
+import { getPostLink, filePath } from '../lib/blog-helpers.ts'
+import PostTags from '../components/PostTags.astro'
 
 export interface Props {
-  post: Post;
-  enableLink: boolean;
+  post: Post
+  enableLink: boolean
 }
 
-const { post, enableLink = true } = Astro.props;
+const { post, enableLink = true } = Astro.props
 
-let image = "";
+let image = ''
 if (post.FeaturedImage && post.FeaturedImage.Url) {
   if (import.meta.env.DEV) {
-    image = post.FeaturedImage.Url;
+    image = post.FeaturedImage.Url
   } else {
-    image = filePath(new URL(post.FeaturedImage.Url));
+    image = filePath(new URL(post.FeaturedImage.Url))
   }
 }
 ---
@@ -41,7 +41,7 @@ if (post.FeaturedImage && post.FeaturedImage.Url) {
         {post.Title}
       </h3>
       <p class="mt-2 text-white/[.8] hidden">
-        {post.Excerpt ? post.Excerpt : ""}
+        {post.Excerpt ? post.Excerpt : ''}
       </p>
     </div>
   </div>

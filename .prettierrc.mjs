@@ -1,17 +1,17 @@
-{
-  "$schema": "http://json.schemastore.org/prettierrc",
-  "arrowParens": "avoid",
-  "bracketSpacing": true,
-  "overrides": [
+// .prettierrc.mjs
+/** @type {import("prettier").Config} */
+export default {
+  plugins: ['prettier-plugin-astro'],
+  trailingComma: 'es5',
+  tabWidth: 2,
+  semi: false,
+  singleQuote: true,
+  overrides: [
     {
-      "files": "*.astro",
-      "options": {
-        "parser": "astro"
-      }
-    }
+      files: '*.astro',
+      options: {
+        parser: 'astro',
+      },
+    },
   ],
-  "proseWrap": "always",
-  "plugins": ["prettier-plugin-astro", "prettier-plugin-tailwindcss"],
-  "singleQuote": false,
-  "trailingComma": "all"
 }
