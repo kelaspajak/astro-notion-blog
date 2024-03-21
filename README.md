@@ -84,7 +84,7 @@ Actions.
 
 ### Additional requirements
 
-- Node.js v18 or higher
+- Node.js v18.14.1 or higher
 
 ### Steps
 
@@ -103,5 +103,5 @@ npm install
 npm run dev
 ```
 
-3. Open [http://localhost:3000](http://localhost:3000) in your browser
+3. Open [http://localhost:4321](http://localhost:4321) in your browser
 4. Press `Ctrl+C` in the terminal to stop

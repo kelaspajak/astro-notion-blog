@@ -27,8 +27,9 @@ const getSite = function () {
         .join('.')}`
     ).toString()
   }
-  return new URL(BASE_PATH, 'http://localhost:3000').toString()
-}
+
+  return new URL(BASE_PATH, 'http://localhost:4321').toString();
+};
 
 // https://astro.build/config
 export default defineConfig({
