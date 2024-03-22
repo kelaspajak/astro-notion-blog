@@ -1,0 +1,207 @@
+---
+import { Image } from 'astro:assets'
+import { buttonVariants } from '@/components/ui/button'
+import tiny from '../images/featured-telegram-tiny.jpg?url'
+
+import { Icons } from '../components/icons.tsx'
+
+---
+
+<!-- Features -->
+<div class="mx-auto max-w-5xl px-4 py-10 sm:px-6 lg:px-8 lg:py-14">
+    <div class="relative p-6 md:p-16">
+      <!-- Grid -->
+      <div
+        class="relative z-10 lg:grid lg:grid-cols-12 lg:items-center lg:gap-16"
+      >
+        <div class="mb-10 lg:order-2 lg:col-span-6 lg:col-start-8 lg:mb-0">
+          <h2 class="balance text-2xl font-bold sm:text-3xl">
+            Grup dan Channel yang tersedia
+          </h2>
+
+          <!-- Tab Navs -->
+          <nav
+            class="mt-5 grid gap-4 md:mt-10"
+            aria-label="Tabs"
+            role="tablist"
+          >
+            <button
+              type="button"
+              class="active rounded-xl p-4 text-left hover:bg-zinc-200/50 hs-tab-active:bg-white hs-tab-active:shadow-md hs-tab-active:hover:border-transparent md:p-5"
+              id="tabs-with-card-item-1"
+              data-hs-tab="#tabs-with-card-1"
+              aria-controls="tabs-with-card-1"
+              role="tab"
+            >
+              <span class="flex"
+                ><Icons.telegramCircle
+                  className="mt-2 h-6 w-6 flex-shrink-0 hs-tab-active:text-blue-600 md:h-7 md:w-7"
+                />
+
+                <span class="ml-6 grow">
+                  <span
+                    class="block text-lg font-semibold hs-tab-active:text-blue-600"
+                    >Diskusi Pajak</span
+                  >
+                  <span class="balance mt-1 block"
+                    >Diskusi Pajak secara umum, pembahasan pajak yang
+                    dikelola pemerintah pusat</span
+                  >
+                </span>
+              </span>
+            </button>
+
+            <button
+              type="button"
+              class="rounded-xl p-4 text-left hover:bg-zinc-200/80 hs-tab-active:bg-white hs-tab-active:shadow-md hs-tab-active:hover:border-transparent md:p-5"
+              id="tabs-with-card-item-2"
+              data-hs-tab="#tabs-with-card-2"
+              aria-controls="tabs-with-card-2"
+              role="tab"
+            >
+              <span class="flex">
+                <Icons.kubusDot
+                  className="mt-2 h-6 w-6 flex-shrink-0 hs-tab-active:text-blue-600 md:h-7 md:w-7"
+                />
+                <span class="ml-6 grow">
+                  <span
+                    class="balance block text-lg font-semibold hs-tab-active:text-blue-600"
+                    >Aplikasi eBukpot eFaktur eReg eForm</span
+                  >
+                  <span class="balance mt-1 block"
+                    >Pembahasan seputar aplikasi pendukung pelaporan dan
+                    layanan perpajakan</span
+                  >
+                </span>
+              </span>
+            </button>
+
+            <button
+              type="button"
+              class="rounded-xl p-4 text-left hover:bg-zinc-200/80 hs-tab-active:bg-white hs-tab-active:shadow-md hs-tab-active:hover:border-transparent md:p-5"
+              id="tabs-with-card-item-3"
+              data-hs-tab="#tabs-with-card-3"
+              aria-controls="tabs-with-card-3"
+              role="tab"
+            >
+              <span class="flex">
+                <Icons.twoPeople
+                  className="mt-2 h-6 w-6 flex-shrink-0 hs-tab-active:text-blue-600 md:h-7 md:w-7"
+                />
+                <span class="ml-6 grow">
+                  <span
+                    class="balance block text-lg font-semibold hs-tab-active:text-blue-600"
+                    >Diskusi Bendahara</span
+                  >
+                  <span class="balance mt-1 block"
+                    >Penerimaan bendahara cukup signifikan untuk setiap KPP,
+                    mari kita bahas khusus disini.</span
+                  >
+                </span>
+              </span>
+            </button>
+          </nav>
+          <!-- End Tab Navs -->
+        </div>
+        <!-- End Col -->
+
+        <div class="lg:col-span-6">
+          <div class="relative">
+            <!-- Tab Content -->
+            <div>
+              <div
+                id="tabs-with-card-1"
+                role="tabpanel"
+                aria-labelledby="tabs-with-card-item-1"
+              >
+                <Image
+                  class="mx-auto rounded-xl object-scale-down shadow-xl shadow-zinc-300"
+                  src={tiny}
+                  alt="contoh telegram diskusi pajak"
+                  width={486}
+                  height={609}
+                />
+              </div>
+            </div>
+            <!-- End Tab Content -->
+
+            <!-- SVG Element -->
+            <div
+              class="absolute right-0 top-0 hidden translate-x-20 md:block lg:translate-x-20"
+            >
+              <svg
+                class="h-auto w-16 text-orange-500"
+                width="121"
+                height="135"
+                viewBox="0 0 121 135"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M5 16.4754C11.7688 27.4499 21.2452 57.3224 5 89.0164"
+                  stroke="currentColor"
+                  stroke-width="10"
+                  stroke-linecap="round"></path>
+                <path
+                  d="M33.6761 112.104C44.6984 98.1239 74.2618 57.6776 83.4821 5"
+                  stroke="currentColor"
+                  stroke-width="10"
+                  stroke-linecap="round"></path>
+                <path
+                  d="M50.5525 130C68.2064 127.495 110.731 117.541 116 78.0874"
+                  stroke="currentColor"
+                  stroke-width="10"
+                  stroke-linecap="round"></path>
+              </svg>
+            </div>
+            <!-- End SVG Element -->
+          </div>
+        </div>
+        <!-- End Col -->
+      </div>
+      <!-- End Grid -->
+
+      <!-- Background Color -->
+      <div class="absolute inset-0 grid h-full w-full grid-cols-12">
+        <div
+          class="col-span-full h-5/6 w-full rounded-xl bg-zinc-100/90 sm:h-3/4 lg:col-span-7 lg:col-start-6 lg:h-full"
+        >
+        </div>
+      </div>
+      <!-- End Background Color -->
+    </div>
+  </div>
+  <!-- End Features -->
+
+
+
+  
+  <div class="pt-10 md:pt-24">
+    <div class="mx-auto max-w-5xl px-4 pb-12 sm:px-6 lg:px-8">
+      <div class="mx-auto max-w-xl text-center lg:max-w-4xl">
+        <h1
+          class="balance text-3xl font-bold leading-snug sm:text-6xl sm:leading-tight lg:text-7xl lg:leading-tight"
+        >
+          <span
+            class="relative mr-3 text-gray-10 before:absolute before:right-0 before:top-0 before:z-10 before:-mr-2 before:mt-2 before:block before:h-6 before:w-6 before:-rotate-12 before:bg-[url('/Microsoft-Fluentui-Emoji-3d-Smiling-Face-With-Sunglasses-3d.svg')] before:bg-[length:24px_24px] sm:before:h-8 sm:before:w-8 sm:before:bg-[length:32px_32px]"
+            >Gratis
+          </span>bergabung dengan Diskusi Pajak
+          <!-- <span class="block">di Indonesia</span> -->
+        </h1><p class="balance mx-auto mt-3 max-w-2xl md:mt-5 md:text-lg">
+          memberikan informasi dan panduan tentang berbagai aspek peraturan
+          dan undang-undang pajak.
+        </p>
+        <div
+          class="mt-8 grid w-full gap-3 sm:inline-flex sm:justify-center"
+        >
+          <a
+            class={buttonVariants({ variant: 'default' })}
+            href="https://t.me/addlist/HXeQGfBQr9ZjNzA1"
+            target="_blank"
+            ><Icons.telegram className="mr-2 h-4 w-4" />Bergabung grup
+            Telegram</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>

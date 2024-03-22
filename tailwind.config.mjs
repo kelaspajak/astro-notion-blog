@@ -28,8 +28,8 @@ module.exports = {
           },
         ],
         serif: ['Newsreader', ...fontFamily.serif],
-        heading: ['SF Pro Display', 'sans-serif'],
-        sans: ['SF Pro Display', 'sans-serif'],
+        heading: ['Inter Var', 'sans-serif'],
+        sans: ['Inter Var', 'sans-serif'],
       },
       animation: {
         marquee: 'marquee 50s linear infinite',

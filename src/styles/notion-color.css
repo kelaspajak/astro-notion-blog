@@ -1,3 +1,8 @@
+.default,
+.default:hover {
+  color: rgba(120, 119, 116, 1);
+}
+
 .gray,
 .gray:hover {
   color: rgba(120, 119, 116, 1);

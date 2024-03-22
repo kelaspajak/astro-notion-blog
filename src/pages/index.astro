@@ -1,39 +1,31 @@
 ---
 import { Image } from 'astro:assets'
 import Hero from '../images/hero-berlangganan.jpg?url'
-import tiny from '../images/featured-telegram-tiny.jpg?url'
 
 import Layout from '../layouts/Layout.astro'
-import { Icons } from '../components/icons.tsx'
-import Icon from '../components/Icon.astro'
-
-import { buttonVariants } from '@/components/ui/button'
 ---
 
 <Layout
-  title="Diskusi Pajak"
-  description="Pertama dan Terbesar di Indonesia "
-  ogImage="/og-image.webp"
-  path="/"
+	title='Diskusi Pajak'
+	description='Pertama dan Terbesar di Indonesia '
+	ogImage='/og-image.webp'
+	path='/'
 >
-  <div slot="main">
-    <!-- Hero -->
-    <div class="mb-16">
-      <Image
-        src={Hero}
-        alt="diskusi pajak merupakan diskusi perpajakan pertama dan terbesar di indonesia dengan beberapa grup diskusi pajak diskusi aplikasi perpajakan bendahara"
-        class="mx-auto w-full max-w-5xl cursor-pointer bg-cover bg-center bg-no-repeat object-cover shadow-2xl transition duration-300 hover:scale-105 sm:rounded-xl"
-        height={349}
-        width={1024}
-        alt="gambar telegram diskusi pajak beserta grup dan channelnya"
-      />
-    </div>
-    <div class="mx-auto w-full max-w-5xl">
-      
+	<div slot='main'>
+		<!-- Hero -->
+		<div class='mb-16'>
+			<Image
+				src={Hero}
+				alt='diskusi pajak merupakan diskusi perpajakan pertama dan terbesar di indonesia dengan beberapa grup diskusi pajak diskusi aplikasi perpajakan bendahara'
+				class='mx-auto w-full max-w-5xl cursor-pointer bg-cover bg-center bg-no-repeat object-cover shadow-2xl transition duration-300 hover:scale-105 sm:rounded-xl'
+				height={349}
+				width={1024}
+				alt='gambar telegram diskusi pajak beserta grup dan channelnya'
+			/>
+		</div>
 
-      
+		
+		  
 
-      
-    </div>
-  </div>
+	</div>
 </Layout>
