@@ -1,0 +1,127 @@
+---
+---
+
+<!-- FeaturesStat -->
+<div
+class="mx-auto w-full max-w-5xl px-4 py-10 font-heading sm:px-6 lg:px-8 lg:py-14"
+>
+<!-- Title -->
+<div class="mx-auto mb-8 max-w-2xl text-center lg:mb-14">
+  <h2 class="balance text-3xl font-bold lg:text-4xl">
+    Diskusi Pajak dalam angka
+  </h2>
+</div>
+<!-- End Title -->
+<!-- Grid -->
+<div
+  class="mt-20 grid grid-cols-2 gap-6 sm:gap-12 lg:grid-cols-3 lg:gap-8"
+>
+  {
+    [
+      {
+        id: 1,
+        name: 'Telegram',
+        desc: 'User Grup dan Channel',
+        count: '34.000+',
+      },
+      {
+        id: 2,
+        name: 'Facebook',
+        desc: 'User Facebook Grup dan Pages',
+        count: '17.000+',
+      },
+      {
+        id: 3,
+        name: 'File & Slide Perpajakan',
+        desc: 'Dalam Sharepoint & Teams',
+        count: '1Gb++',
+      },
+    ].map((stat) => (
+      <div>
+        <h4 class="text-lg font-semibold sm:text-xl">{stat.name}</h4>
+        <p class="mt-2 text-4xl font-bold sm:mt-3 sm:text-6xl">
+          {stat.count}
+        </p>
+        <p class="mt-1 text-neutral">{stat.desc}</p>
+      </div>
+    ))
+  }
+</div>
+<!-- End Grid -->
+</div>
+<!-- End FeaturesStat -->
+
+
+
+<!-- Features General-->
+<div class="mx-auto w-full max-w-5xl px-4 py-10 sm:px-6 lg:px-8 lg:py-14">
+<!-- Title -->
+<div class="mx-auto mb-8 max-w-2xl text-center lg:mb-14">
+  <h2 class="balance text-3xl font-bold lg:text-4xl">
+    Referensi Pajak Terlengkap, Akses Sekarang
+  </h2>
+  <p class="balance mt-3">
+    Dengan pengalaman perpajakan yang kami miliki, kami siap untuk
+    membantu anda
+  </p>
+</div>
+<!-- End Title -->
+
+<!-- Grid -->
+<div class="mx-auto grid max-w-3xl grid-cols-12 gap-6 lg:gap-8">
+  <!-- Icon Block -->
+  {
+    [
+      {
+        id: 1,
+        name: 'Grup yang dimoderasi',
+        icon: <Icons.general01 />,
+      },
+      {
+        id: 2,
+        name: 'Berpengalaman dibidang perpajakan',
+        icon: <Icons.general02 />,
+      },
+      {
+        id: 3,
+        name: '24/7 Support',
+        icon: <Icons.general03 />,
+      },
+    ].map((general) => (
+      <div class="col-span-6 text-center sm:col-span-4">
+        {general.icon}
+        <div class="mt-2 sm:mt-6">
+          <h3 class="text-lg font-semibold">{general.name}</h3>
+        </div>
+      </div>
+    ))
+  }
+  <!-- End Icon Block -->
+</div>
+<!-- End Grid -->
+
+<!-- Grid gambar-->
+<div
+  class="mt-20 grid grid-cols-2 items-center gap-x-2 sm:gap-x-6 lg:gap-x-8"
+>
+  {
+    [
+      {
+        id: 1,
+        href: '/src/images/telegram-diskusipajak.jpg?url',
+        alt: 'telegram diskusi pajak',
+      },
+      {
+        id: 2,
+        href: '/src/images/pinterest-diskusipajak.jpg?url',
+        alt: 'sosial media diskusi pajak',
+      },
+    ].map((gambar) => (
+      <div class="group relative block">
+        <img class="rounded-xl" src={gambar.href} alt={gambar.alt} />
+      </div>
+    ))
+  }
+</div>
+</div>
+<!-- End Features -->

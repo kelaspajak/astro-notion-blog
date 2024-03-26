@@ -15,7 +15,7 @@ import { Icons } from './icons'
       aria-label="logo legend diskusi pajak"
     >
       <Image
-        class="inline-block h-[2.1rem] w-[2.1rem] rounded-full outline outline-gray-5 shadow"
+        class="inline-block h-[2.1rem] w-[2.1rem] rounded-full outline outline-gray-5 shadow hover:outline-red-400"
         src={logo}
         width={90}
         height={90}
@@ -28,14 +28,8 @@ import { Icons } from './icons'
     <Icons.minusVertical className="hidden sm:block"/>
     <div class="text-sm sm:mt-0 mt-4 flex font-semibold font-heading">
       <a
-        href={getNavLink('/beli-lisensi-pajak365')}
-        class="decoration-2 hover:underline decoration-ruby-10"
-        rel="noopener noreferrer"
-        aria-label="link ke fitur berlangganan">Beli lisensi pajak365</a
-      >
-      <a
         href={getNavLink('/posts/tag/How-to')}
-        class="ml-6 decoration-2 hover:underline"
+        class="ml-6: decoration-2 hover:text-red-400"
         rel="noopener noreferrer"
         aria-label="link ke blog post how-to">How-to</a
       >
@@ -43,7 +37,7 @@ import { Icons } from './icons'
     <span class="flex sm:ml-auto sm:mt-0 mt-4 justify-center item-center">
       <a
         href="https://www.facebook.com/diskusipajak"
-        class=""
+        class="hover:text-red-400"
         target="_blank"
         aria-label="link ke facebook group"
         ><Icons.facebook className="w-5 h-5" />
@@ -51,7 +45,7 @@ import { Icons } from './icons'
 
       <a
         href="https://t.me/addlist/HXeQGfBQr9ZjNzA1"
-        class="ml-3"
+        class="ml-3 hover:text-red-400"
         target="_blank"
         aria-label="link ke folder telegram diskusi pajak"
         ><Icons.telegram className="w-5 h-5" />
